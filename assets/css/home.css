@@ -1,0 +1,110 @@
+body{
+    margin: 0;
+    background-color: rgb(144, 209, 249);
+    
+}
+/* for centering the item */
+.center{
+    margin-left:50% ;
+    transform: translate(-50%,0);
+}
+h1{
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 3em;
+    color: rgb(3, 3, 46);
+}
+/* for discription label */
+.lablel{
+    padding-left: 4%;
+}
+
+#description{
+    width: 90%;
+    height: 50px;
+
+    
+}
+/* for category and date */
+.catanddate{
+    width: 90%;
+    background-color: rgb(249, 144, 217);
+    
+}
+/* for list */
+
+.listdiv{
+    display: inline-block;
+    width: 49%;
+    box-sizing: border-box; 
+    padding-left: 1% ;  
+    padding-bottom: 3px;
+}
+#categories,#dates{
+    width: 90%;
+    height: 40px;
+}
+#categories{
+    height: 44px;
+}
+/* for add tast button */
+.addtask{
+    width: 25%;
+    height: 30px;
+    background-color: aquamarine;
+    border: 3px solid #73AD21;
+}
+/* for delete */
+#deletelist{
+    width: 25%;
+    height: 30px;
+    background-color: rgb(255, 127, 127);
+    border: 3px solid #ad2121;
+   
+    margin-top:20px ;
+    
+}
+
+#deletelist:hover{
+    background-color: rgb(234, 79, 79);
+    width: 26%;
+    height: 31px;
+
+}
+
+.addtask:hover{
+    background-color: rgb(79, 234, 182);
+    width: 26%;
+    height: 31px;
+   
+}
+.list{
+    background-color: rgb(94, 172, 221);
+    width: 70vw;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding-right: 5px;
+    margin-bottom: 5px;
+    border-radius: 10px;
+}
+.list:hover{
+    background-color: rgb(70, 141, 185);
+}
+
+.listdiscription{
+    
+    padding-left: 10px;
+}
+/* for categor p tag in list */
+.listcategory-p{
+    background-color: #ad2121;
+    width: 70px;
+    height: 30px;
+    border-radius: 5px;
+    text-align: center;
+    
+    top: 4px;
+    margin-left: auto;
+    
+}

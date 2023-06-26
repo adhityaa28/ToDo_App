@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%=title%></title>
+    <link rel="stylesheet" href="/css/home.css">
+</head>
+<body>
+    <h1>To Do App</h1>
+    <!-- form for getting data -->
+    <form action="/adding-list" method="POST" class="form">
+        <div class="description-div">
+            <label class="lablel"for="description">DESCRIPTION:</label>
+            <input type="text" class="center" id="description" name="description" placeholder="Enter the task" required >
+        
+        </div>
+        <!-- category and date -->
+        <div class="catanddate center">
+            <div id="categoriesdiv" class="listdiv">
+                <label for="categories">CATEGORY:</label><br>
+                <select name="category" id="categories" required>
+                <option value="personal">personal:</option>
+                <option value="work">work</option>
+                <option value="office">office</option>
+                <option value="school">school</option>
+                <option value="others">others</option>
+            </select>
+            </div>
+            <div id="datesdiv" class="listdiv">
+                <label for="dates">DATE:</label><br>
+                <input type="date" name="date" id="dates" required>
+            </div>
+        </div>
+        
+        <br>
+        
+        <!-- submit -->
+    <button type="submit" class="addtask center">Add Task</button>
+    </form>
+    <!-- delete -->
+    <a href="" id="delete" >
+        <button id="deletelist" class="center"> delete task</button>
+    </a>
+<!-- list -->
+    <ul type="none">
+        <%for(let i of todolist){%>
+            <li >
+                <div class="list">
+                    
+                        <input type="checkbox" class="checkbox"  name="checkbox" id="" value="<%=i._id%>">
+                    
+                    <div class="listdiscription">
+                        <h3><%=i.description%></h3>
+                        <p><i class="fa-solid fa-calendar-days" style="color: #000000;"></i>  <%=i.date%></p>
+                    </div>
+                    
+                        <p class="listcategory-p"><%=i.category%></p>
+                    
+                    
+                
+                </div>
+                
+            </li>
+            <%}%>
+    </ul>
+    <!-- font swesome -->
+    <script src="https://kit.fontawesome.com/2a9222484a.js" crossorigin="anonymous"></script>
+    <!-- js file -->
+    <script type="text/javascript" src="/js/todolist.js"></script>
+</body>
+</html>
